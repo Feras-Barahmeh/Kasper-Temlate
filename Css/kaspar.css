@@ -1145,37 +1145,38 @@ footer::after {
     background-color: rgb(0 0 0 / 70%);
 }
 footer img {
-    height: 40px;
     z-index: 3;
-    position: sticky;
+    position: relative;
     left: 50%;
-    display: block;
-    margin-bottom: 30px;
+    transform: translate(-50%, -50%);
 }
+
+footer .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 280px;
+}
+
+
+footer .info .contact {
+    z-index: 4;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 footer p {
-    display: block;
-    position: absolute;
-    left: 50%;
-    z-index: 3;
-    padding-bottom: 25px;
+    z-index: 5;
     font-size: 17px;
 }
-footer p::after {
-    content: "";
-    height: 2px;
-    width: 150px;
-    position: absolute;
-    color: white;
-    left: -15px;
-    z-index: 3;
-    border-bottom: 2px solid white;
-    top: 40px;
-}
+
+
+
+
 footer .lings {
-    position: absolute;
-    left: 50%;
+    position: relative;
     z-index: 3;
-    top: 230px;
     font-size: 20px;
 }
 
@@ -1197,14 +1198,18 @@ footer .lings i::before {
     position: relative;
 }
 
+.email {
+    position: relative;
+    z-index: 4;
+    color: white;
+    text-decoration: none;
+
+}
+
 footer .copyright {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
     z-index: 3;
     position: relative;
     top: 100px;
-    left: 50%;
 }
 @media (max-width: 767px) {
     footer .copyright {
